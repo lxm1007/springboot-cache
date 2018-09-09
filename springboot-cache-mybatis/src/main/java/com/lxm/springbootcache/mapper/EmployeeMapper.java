@@ -36,4 +36,12 @@ public interface EmployeeMapper {
     public Employee getOneEmployeeById(Integer id);
 
 
+    /**
+     * 按照员工名字查询员工
+     * @param name
+     * @return
+     */
+    @Select("select * from employee where name=#{name}")
+    public Employee getEmpByName(String name);
+
 }
